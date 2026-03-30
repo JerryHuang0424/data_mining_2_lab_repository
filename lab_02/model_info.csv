@@ -1,2 +1,3 @@
-features,model_name,full_train_r2,val_r2,val_rmse
-"['Type', 'Year built', 'Heating', 'Cooling', 'Parking', 'Lot', 'Bedrooms', 'Bathrooms', 'Full bathrooms', 'Total interior livable area', 'Total spaces', 'Garage spaces', 'Region', 'Elementary School', 'Elementary School Score', 'Elementary School Distance', 'Middle School', 'Middle School Score', 'Middle School Distance', 'High School', 'High School Score', 'High School Distance', 'Flooring', 'Heating features', 'Cooling features', 'Appliances included', 'Laundry features', 'Parking features', 'Tax assessed value', 'Annual tax amount', 'Listed Price', 'Last Sold Price', 'Price_Diff', 'Price_Ratio', 'Area_per_Bedroom', 'Bed_to_Bath_Ratio']",Extra Trees,0.9978048157580457,0.8015438057361859,780654.6359737521
+version https://git-lfs.github.com/spec/v1
+oid sha256:38910ddb6ed7c0aae8b2e1ab8549201a29b36c103e0fa5d11679e8b1f3e7f5f7
+size 769
