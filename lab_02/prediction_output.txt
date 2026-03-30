@@ -1,0 +1,139 @@
+======================================================================
+Fast House Price Prediction - Top 5 Models
+======================================================================
+
+Loading data...
+Training set size: (47439, 41)
+Test set size: (31626, 40)
+
+Preprocessing data...
+Processed training set size: (47439, 37)
+Processed test set size: (31626, 36)
+Feature count: 36
+Sample count: 47439
+
+Train set size: (37951, 36)
+Validation set size: (9488, 36)
+
+======================================================================
+Training Top 5 Models
+======================================================================
+
+Training XGBoost...
+  Train RMSE: 198695.13, MAE: 95786.52, R2: 0.9860
+  Val RMSE: 1056339.07, MAE: 154678.43, R2: 0.6366
+  CV RMSE: 849611.59 (+/- 386177012496.18)
+
+Training LightGBM...
+  Train RMSE: 427805.16, MAE: 124290.37, R2: 0.9351
+  Val RMSE: 815273.56, MAE: 165869.20, R2: 0.7836
+  CV RMSE: 793413.57 (+/- 426906186937.85)
+
+Training Extra Trees...
+  Train RMSE: 70776.65, MAE: 43389.22, R2: 0.9982
+  Val RMSE: 780654.64, MAE: 139829.10, R2: 0.8015
+  CV RMSE: 712084.18 (+/- 453046744969.83)
+
+Training Random Forest...
+  Train RMSE: 290865.73, MAE: 71563.22, R2: 0.9700
+  Val RMSE: 809447.39, MAE: 146827.65, R2: 0.7866
+  CV RMSE: 788405.14 (+/- 438357546259.63)
+
+Training Gradient Boosting...
+  Train RMSE: 223636.33, MAE: 101770.45, R2: 0.9823
+  Val RMSE: 818249.32, MAE: 148136.99, R2: 0.7820
+  CV RMSE: 724224.08 (+/- 468623012828.60)
+
+======================================================================
+Model Comparison
+======================================================================
+
+Best Model: Extra Trees
+Validation R2: 0.8015 (80.15%)
+Validation RMSE: 780654.64
+Validation MAE: 139829.10
+Cross-Validation RMSE: 712084.18 (+/- 453046744969.83)
+
+Retraining best model on full training set...
+Full training set R2: 0.9978
+
+======================================================================
+Feature Importance Analysis
+======================================================================
+
+Top 10 Important Features:
+                        Feature  Importance
+30                 Listed Price    0.271938
+28           Tax assessed value    0.163200
+29            Annual tax amount    0.160986
+32                   Price_Diff    0.089268
+7                     Bathrooms    0.046495
+8                Full bathrooms    0.044590
+9   Total interior livable area    0.026099
+31              Last Sold Price    0.024819
+14      Elementary School Score    0.012403
+35            Bed_to_Bath_Ratio    0.012009
+
+Feature importance plot saved as feature_importance_top5.png
+
+======================================================================
+Predicting Test Set
+======================================================================
+
+Predictions saved to submission.csv
+Result shape: (31626, 2)
+Id range: 47439 - 79064
+
+Prediction Statistics:
+  Min: 138863.95
+  Max: 29593133.88
+  Mean: 900799.01
+  Median: 626333.72
+  Std: 1044166.89
+
+First 10 predictions:
+      Id    Sold Price
+0  47439  1.080334e+06
+1  47440  5.443907e+05
+2  47441  1.117403e+06
+3  47442  1.382266e+06
+4  47443  9.535278e+05
+5  47444  7.371433e+05
+6  47445  1.483678e+06
+7  47446  4.280273e+05
+8  47447  2.075710e+06
+9  47448  5.009999e+05
+
+Model saved as best_model.pkl
+
+======================================================================
+All Model Evaluation Results
+======================================================================
+            Model    Train RMSE     Train MAE  Train R2  Validation RMSE  Validation MAE  Validation R2   CV RMSE          CV Std
+          XGBoost 198695.133064  95786.519774  0.986006     1.056339e+06   154678.429534       0.636626 849611.59 386177012496.18
+         LightGBM 427805.162166 124290.372214  0.935127     8.152736e+05   165869.203950       0.783552 793413.57 426906186937.85
+      Extra Trees  70776.653101  43389.219304  0.998224     7.806546e+05   139829.099227       0.801544 712084.18 453046744969.83
+    Random Forest 290865.729068  71563.224633  0.970012     8.094474e+05   146827.645225       0.786635 788405.14 438357546259.63
+Gradient Boosting 223636.334539 101770.449638  0.982272     8.182493e+05   148136.987190       0.781969 724224.08 468623012828.60
+
+Model comparison saved as model_comparison.csv
+
+======================================================================
+Prediction Result Statistics
+======================================================================
+Prediction range: [138863.95, 29593133.88]
+Prediction mean: 900799.01
+Prediction median: 626333.72
+Prediction std: 1044166.89
+Model info saved as model_info.csv
+
+======================================================================
+Processing Complete!
+======================================================================
+
+Main Results:
+  Best Model: Extra Trees
+  Full Training R2: 0.9978
+  Validation R2: 0.8015 (80.15%)
+  Validation RMSE: 780654.64
+  Average Relative Error: 10.77%

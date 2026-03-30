@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python train_model.py)",
+      "Bash(pip install:*)",
+      "Bash(python train_model_v2.py)",
+      "Bash(python train_ensemble.py)",
+      "Bash(python predict_with_train.py)",
+      "Bash(grep -E '\\\\.\\(csv|png|pkl|py|md\\)$')",
+      "Bash(python -c \"import pandas as pd; train = pd.read_csv\\(''train.csv''\\); print\\(''Train Id range:'', train[''Id''].min\\(\\), ''-'', train[''Id''].max\\(\\)\\); print\\(''Train shape:'', train.shape\\)\")",
+      "Bash(rm -f train_predictions.csv feature_importance.png feature_importance_all.png model_comparison.csv train_model.py train_model_v2.py train_ensemble.py report.md)",
+      "Bash(ls -lh *.csv *.png *.pkl *.py *.md)",
+      "Bash(python -c \"import pandas as pd; df = pd.read_csv\\(''submission.csv''\\); print\\(f''实际数据行数: {len\\(df\\)}''\\); print\\(f''Id范围: {df[\"\"Id\"\"].min\\(\\)} - {df[\"\"Id\"\"].max\\(\\)}''\\); print\\(f''数据是否完整: {len\\(df\\) == 47439}''\\)\")",
+      "Bash(python predict_with_advanced_models.py)",
+      "Bash(python predict_top5_fast.py)",
+      "Bash(tee prediction_output.txt)",
+      "Bash(python -c \":*)",
+      "Bash(grep -E '\\\\.\\(csv|png|pkl|py|txt|md\\)$')"
+    ]
+  }
+}
